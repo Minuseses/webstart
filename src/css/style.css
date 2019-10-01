@@ -7,7 +7,7 @@ img {
 }
 
 .container {
-  width: 1153px;
+  width: 1170px;
   margin: auto;
 }
 
@@ -29,8 +29,7 @@ img {
   border-radius: 10px;
   background-color: #ffd200;
   border: none;
-  padding: 17px 27px;
-  margin-right: 20px;
+  padding: 17px 30px;
 }
 
 .navbar {
@@ -60,7 +59,7 @@ img {
 }
 
 .navbar__address {
-  font-size: 12px;
+  font-size: 13px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
