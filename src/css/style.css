@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'Museo Sans Light';
-  src: url("../fonts/museoSansCurl/MuseoSansCyrl-300.eot");
-  src: url("../fonts/museoSansCurl/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../fonts/museoSansCurl/MuseoSansCyrl-300.woff") format("woff"), url("../fonts/museoSansCurl/MuseoSansCyrl-300.ttf") format("truetype");
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot");
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Museo Sans 700 Bold';
-  src: url("../fonts/museoSansCurl/MuseoSansCyrl-700.eot");
-  src: url("../fonts/museoSansCurl/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("../fonts/museoSansCurl/MuseoSansCyrl-700.woff") format("woff"), url("../fonts/museoSansCurl/MuseoSansCyrl-700.ttf") format("truetype");
+  font-family: 'Museo Sans Bold';
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot");
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -103,7 +103,7 @@ img {
   font-size: 20px;
   text-decoration: none;
   margin-top: 7px;
-  font-family: 'Museo Sans 700 Bold', sans-serif;
+  font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
 }
 
@@ -158,7 +158,7 @@ button, button:active, button:focus {
 }
 
 .hero-text__title {
-  font-family: 'Museo Sans 700 Bold', sans-serif;
+  font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
   font-size: 41px;
   line-height: 55px;
@@ -166,7 +166,7 @@ button, button:active, button:focus {
 }
 
 .hero-text__subtitle {
-  font-family: 'Museo Sans 700 Bold', sans-serif;
+  font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
   display: inline-block;
   font-size: 20px;
