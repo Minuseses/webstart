@@ -24,10 +24,14 @@
     max-width: 250px
     margin-bottom: 35px
   &__input
+    outline: none
     margin-bottom: 30px
     width: 240px
     &:first-child
       margin-right: 10px
+    &:focus
+      border-color: orange
+      transition: 1.2s
   &__button
     +bold
     width: 100%
@@ -81,6 +85,15 @@
     &-block
       width: 100%
       padding-right: 0
+  .input
+    width: 100%
+    padding-top: 24px
+    padding-bottom: 24px
+    padding-right: 0px
+    padding-left: 20px
+    margin-bottom: 8px
+    &:first-child
+      margin-bottom: 10px
 
 
 @media ( max-width: 320px)
