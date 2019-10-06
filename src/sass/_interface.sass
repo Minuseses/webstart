@@ -1,10 +1,48 @@
+*
+  box-sizing: border-box
 body
   +reg
+
 img
   max-width: 100%
+
 .container
   width: 1170px
   margin: auto
+
+// Кнопка
+.button
+  font-size: 13px
+  border-radius: 10px
+  background-color: $main-color
+  border: none
+  padding: 18px 30px
+  outline: none
+  cursor: pointer
+  &:hover
+    background-color: lighten($main-color, 10%)
+
+.section
+  padding: 90px 0
+  &-title
+    font-size: 24px
+    +bold
+  &-subtitle
+    display: block
+    font-size: 16px
+.input
+  border: 1px solid $border-input
+  padding: 20px 28px
+  font-size: 15px
+  border-radius: 10px
+
+
+
+
+
+
+
+
 @media ( max-width: 1200px)
   .container
     width: 960px
@@ -16,9 +54,3 @@ img
 @media ( max-width: 320px )
   .container
     max-width: 275px
-.button
-  font-size: 13px
-  border-radius: 10px
-  background-color: $main-color
-  border: none
-  padding: 17px 30px

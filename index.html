@@ -19,7 +19,7 @@
             <span class="navbar__address">Калуга, Москва, МО</span>
             <a href="tel:+7 (495) 42-251-31" class="navbar__phone"><strong>+7 (495) 42-251-31</strong></a>
           </div>
-          <button class="button navbar__button"><strong>Перезвоните мне</strong></button>
+          <button class="button navbar__button" id="button"><strong>Перезвоните мне</strong></button>
         <!-- /.navbar__info -->
       </div>
     </div>
@@ -55,14 +55,53 @@
             </ul>
           </div>
           <div class="hero-image"> <!--Блок с картинкой-->
-            <img src="src/img/hero/hero-image.png" alt="План квартиры" width="700px">
+            <img src="src/img/hero/hero-image.png" alt="План квартиры" >
           </div>
         </div>
       </div>
     </section>
+
+
+
+    <section class="offer section">
+      <div class="container">
+        <div class="offer-block"> 
+          <h2 class="section-title offer__title">
+            Мы бесплатно разработаем дизайн-проект Вашего жилья и реализуем его!
+          </h2>
+          <span class="section-subtitle offer__subtitle">Оставьте заявку на разработку бесплатного дизайн-проекта!</span>
+          <form action="#" class="form offer__form">
+            <input type="text" class="input offer__input" placeholder="Ваше имя">
+            <input type="tel" class="input offer__input" placeholder="Ваш телефон">
+            <button class="button offer__button">Получить бесплатный дизайн-проект</button>
+              <div class="offer-call">
+                <div class="offer-call__col">Наш менеджер перезвонит Вам в течение 60 секунд </div>
+                <div class="offer-call__col">или перезвоните нам сами <a href="">+7 (495) 42-251-31</a></div>
+              </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
   </main>
+  <div class="modal" id="modal">
+    <div class="modal-dialog">
+      <button class="modal-dialog__close" id="close">&times;</button>
+      <h2 class="modal-dialog__title">Узнайте точную стоимость ремонта по телефону!</h4>
+      <span class="modal-dialog__subtitle">Заполните поля ниже - мы свяжемся с Вами</span>
+        <form action="#" class="form modal__form">
+          <input type="text" class="input modal__input" placeholder="Ваше имя">
+          <input type="tel" class="input modal__input" placeholder="Ваш телефон">
+        </form>
+          <button class="modal-dialog__button">Узнать стоимость</button>
+          <span class="modal-dialog__or">Или Вы можете перезвонить нам сами по телефону:</span>
+          <a href="tel:+7 (495) 42-251-31" class="modal-dialog__phone"><strong>+7 (495) 42-251-31</strong></a>
+    </div>
+  </div>
 
 
 
+  <script src="src/js/main.js"></script>
 </body>
 </html>

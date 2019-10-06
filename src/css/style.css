@@ -14,6 +14,11 @@
   font-style: normal;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   font-family: 'Museo Sans Light', sans-serif;
   font-weight: 300;
@@ -26,6 +31,42 @@ img {
 .container {
   width: 1170px;
   margin: auto;
+}
+
+.button {
+  font-size: 13px;
+  border-radius: 10px;
+  background-color: #ffd200;
+  border: none;
+  padding: 18px 30px;
+  outline: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #ffdb33;
+}
+
+.section {
+  padding: 90px 0;
+}
+
+.section-title {
+  font-size: 24px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  display: block;
+  font-size: 16px;
+}
+
+.input {
+  border: 1px solid #dddddd;
+  padding: 20px 28px;
+  font-size: 15px;
+  border-radius: 10px;
 }
 
 @media (max-width: 1200px) {
@@ -45,14 +86,6 @@ img {
   .container {
     max-width: 275px;
   }
-}
-
-.button {
-  font-size: 13px;
-  border-radius: 10px;
-  background-color: #ffd200;
-  border: none;
-  padding: 17px 30px;
 }
 
 .navbar {
@@ -94,7 +127,6 @@ img {
 
 .navbar__button {
   margin-left: 30px;
-  cursor: pointer;
 }
 
 .navbar__phone {
@@ -125,13 +157,11 @@ img {
     padding-top: 10px;
   }
   .navbar__button {
+    margin-top: -5px;
+    border-radius: 3px;
     font-size: 10px;
-    padding: 15px 25px;
+    padding: 12px 25px;
   }
-}
-
-button, button:active, button:focus {
-  outline: none;
 }
 
 .hero {
@@ -149,12 +179,13 @@ button, button:active, button:focus {
 
 .hero-image {
   margin-top: 5px;
+  margin-right: -14px;
 }
 
 .hero-text {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  padding-right: 140px;
+  margin-left: -12px;
 }
 
 .hero-text__title {
@@ -171,6 +202,7 @@ button, button:active, button:focus {
   display: inline-block;
   font-size: 20px;
   margin-bottom: 68px;
+  margin-left: 2px;
 }
 
 .hero-list {
@@ -179,6 +211,7 @@ button, button:active, button:focus {
 }
 
 .hero-list__item {
+  margin-left: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,9 +221,13 @@ button, button:active, button:focus {
   margin-bottom: 25px;
 }
 
+.hero-list__item:last-child {
+  margin-bottom: 0;
+}
+
 .hero-list__image {
-  width: 37px;
-  height: 37px;
+  width: 40px;
+  height: 40px;
   border: 2px solid #ffd200;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -271,22 +308,282 @@ button, button:active, button:focus {
   }
   .hero-text {
     padding-right: 0;
+    margin-left: 0;
   }
   .hero-text__title {
-    font-size: 20px;
-    margin-bottom: 10px;
+    letter-spacing: 0.4px;
+    line-height: 30px;
+    margin-top: 10px;
+    margin-left: 4px;
+    font-size: 23px;
+    margin-bottom: 7px;
   }
   .hero-text__subtitle {
+    margin-left: 4px;
     font-size: 16px;
     margin-bottom: 30px;
   }
   .hero-list__item {
-    margin-bottom: 15px;
+    margin-bottom: 22px;
+  }
+  .hero-list__text {
+    line-height: 15px;
   }
   .hero-image {
     margin: 0 auto;
-    margin-top: -12px;
-    width: 290px;
+    margin-top: 0px;
+    max-width: 280px;
   }
+}
+
+.offer {
+  background: url("../img/offer/offer-img.png") no-repeat;
+  background-position: center right;
+  background-size: contain;
+  position: relative;
+}
+
+.offer::before {
+  content: '';
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.offer-block {
+  width: 50%;
+  padding-right: 90px;
+  position: relative;
+}
+
+.offer__title {
+  margin-top: -15px;
+  max-width: 360px;
+  line-height: 35px;
+  margin-bottom: 20px;
+}
+
+.offer__subtitle {
+  max-width: 250px;
+  margin-bottom: 35px;
+}
+
+.offer__input {
+  margin-bottom: 30px;
+  width: 240px;
+}
+
+.offer__input:first-child {
+  margin-right: 10px;
+}
+
+.offer__button {
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  width: 100%;
+  min-height: 70px;
+  font-size: 16px;
+  margin-bottom: 28px;
+}
+
+.offer-call {
+  font-size: 15px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 24px;
+  margin-right: 0;
+}
+
+.offer-call__col a {
+  color: #000;
+  text-decoration: none;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.offer-call__col:first-child {
+  margin-right: 70px;
+}
+
+@media (max-width: 1200px) {
+  background-size: cover;
+  .offer__input {
+    margin-bottom: 10px;
+  }
+  .offer__button {
+    font-size: 13px;
+  }
+  .offer-call__col {
+    width: 250px;
+  }
+  .offer-call__col:first-child {
+    margin-right: 45px;
+  }
+  .offer-block {
+    width: 58%;
+  }
+}
+
+@media (max-width: 768px) {
+  .offer {
+    background: #fff;
+  }
+  .offer-block {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .offer__title {
+    max-width: 95%;
+    margin-top: 0;
+    line-height: 22px;
+    margin-bottom: 15px;
+  }
+  .offer-text {
+    margin-top: 20px;
+  }
+  .offer__subtitle {
+    max-width: 100%;
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+  .offer__input {
+    margin-bottom: 15px;
+  }
+  .offer__button {
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-family: 'Museo Sans Bold', sans-serif;
+    font-weight: 700;
+  }
+  .offer-call {
+    display: block;
+  }
+  .offer-call__col:first-child {
+    width: 230px;
+    margin-bottom: 9px;
+  }
+  .offer-call__col:last-child {
+    width: 200px;
+  }
+  .section {
+    padding-top: 50px;
+  }
+  .section-title {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .input {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    padding-right: 0px;
+    padding-left: 20px;
+  }
+  .input:first-child {
+    margin-bottom: 10px;
+  }
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-dialog {
+  position: relative;
+  margin: auto;
+  max-width: 450px;
+  min-width: 300px;
+  width: 90%;
+  background-color: #fff;
+  padding: 40px 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.modal-dialog__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modal-dialog__title {
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 35px;
+}
+
+.modal-dialog__subtitle {
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
+.modal-dialog__button {
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  width: 100%;
+  height: 60px;
+  background-color: #ffd200;
+  border: 0;
+  border-radius: 6px;
+  margin-bottom: 25px;
+}
+
+.modal-dialog__or {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.modal-dialog__phone {
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.modal__input {
+  width: 100%;
+}
+
+.modal__input:first-child {
+  margin-bottom: 10px;
+}
+
+.modal__input:last-child {
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=style.css.map */
