@@ -643,4 +643,13 @@ img {
 .modal__input:last-child {
   margin-bottom: 20px;
 }
+
+#close {
+  outline: none;
+  padding: 3px 8px;
+  font-size: 20px;
+  background-color: #fff;
+  border: #ffd200 solid 3px;
+  border-radius: 50%;
+}
 /*# sourceMappingURL=style.css.map */
