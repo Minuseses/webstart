@@ -282,6 +282,9 @@ img {
 }
 
 @media (max-width: 768px) {
+  .hero-text {
+    margin-left: 0;
+  }
   .hero-text__title {
     font-size: 24px;
     line-height: 1.4;
@@ -383,8 +386,8 @@ img {
 
 .offer__input:focus {
   border-color: orange;
-  -webkit-transition: 1.2s;
-  transition: 1.2s;
+  -webkit-transition: 1.3s;
+  transition: 1.3s;
 }
 
 .offer__button {
@@ -418,11 +421,14 @@ img {
 }
 
 @media (max-width: 1200px) {
-  background-size: cover;
+  .offer {
+    background-size: cover;
+  }
   .offer__input {
     margin-bottom: 10px;
   }
   .offer__button {
+    width: 100%;
     font-size: 13px;
   }
   .offer-call__col {
