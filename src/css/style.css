@@ -171,7 +171,7 @@ img {
   }
   .navbar__button {
     margin-top: -5px;
-    border-radius: 3px;
+    border-radius: 5px;
     font-size: 10px;
     padding: 12px 25px;
   }
@@ -238,6 +238,10 @@ img {
 
 .hero-list__item:first-child {
   margin-bottom: 27px;
+}
+
+.hero-list__item:nth-child(2) {
+  margin-bottom: 20px;
 }
 
 .hero-list__item:last-child {
