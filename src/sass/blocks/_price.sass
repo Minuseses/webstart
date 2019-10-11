@@ -6,7 +6,6 @@
     width: 46%
     font-size: 30px
     line-height: 44px
-    ml
   &__subtitle
     margin-bottom: 59px
     text-align: center
@@ -17,6 +16,7 @@
   text-align: center
   border: 1px solid $border-card
   transition: 0.3s
+  &:last-child
   &:hover
     box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1)
     .card__image::before
@@ -83,6 +83,7 @@
 @media ( max-width: 768px)
   .price
     padding-top: 71px
+    padding-bottom: 14px
     &__title
       margin-top: 0
       font-size: 18px
