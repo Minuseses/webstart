@@ -218,8 +218,8 @@
               <h3 class="form__title">Оставьте заявку на бесплатный расчет ремонта по телефону</h3>
               <span class="form__subtitle">Для этого заполните форму ниже</span>
               <form action="#" id="brif-form">
-                <input type="text" name="username" required class="input brif__input" placeholder="Ваше имя">
-                <input type="tel" name="phone" class="input brif__input" placeholder="Ваш телефон">
+                <input type="text" name="username" class="input brif__input" placeholder="Ваше имя">
+                <input type="tel" name="phone" class="input brif__input phone" placeholder="Ваш телефон">
                 <input type="email" name="email" class="input brif__input" placeholder="Ваш email">
                 <button class="button brif__button">Рассчитать стоимость</button>
                 <span class="form__description">Мы перезвоним Вам в течение 60 секунд</span>
@@ -260,17 +260,34 @@
   <script src="src/js/modal.js"></script>
   <script src="src/js/wow.min.js"></script>
   <script src="src/js/jquery.validate.min.js"></script>
+  <script src="src/js/jquery.maskedinput.min.js"></script>
   <script>
     // WOW
     new WOW().init();
     // Слайдер
     $(document).ready(function() {
       // Валидация форм
-      $('#brif-form').validate(function() {
+      $('#brif-form').validate({
         rules : {
-          username: required
+          username:{
+            required: true,
+            minlength: 3,
+          },
+          email:{
+            required: true,
+            email: true,
+          }
+        },
+        messages: {
+          username:{
+            required: "Нам нужно ваше имя",
+            minlength: jQuery.validator.format("Минимальное количство символов: {0}"),
+          },
+          email: "Нам нужен ваш email"
         }
       });
+      // Маска для телефона
+      $('.phone').mask('+7(999)999-99-99');
       // Слайдер
       $('.slider').slick({
         slidesToShow: 3,

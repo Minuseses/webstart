@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  var button = $('button');
+  var button = $('#button');
   var modal = $('#modal');
   var close = $('#close');
   var top_show = 150; 
