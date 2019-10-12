@@ -13,16 +13,21 @@
     padding-left: 215px
     text-align: center
   &__input
+    cursor: pointer
+    outline: none
     width: 100%
     max-width: 370px
     margin-bottom: 20px
+    &:focus
+      border-color: orange
+      transition: 1s
   &__button
     +bold
     font-size: 16px
     height: 70px
     width: 100%
     max-width: 370px
-    margin-top: 15px
+    margin-top: 0px
     margin-bottom: 29px
 .interview
   padding-right: 60px
@@ -44,7 +49,7 @@
       display: flex
       align-items: center
       margin-bottom: 32px
-      font-size: 18px
+      font-size: 17.7px
     &__counter
       display: inline-block
       margin-right: 33px
@@ -71,6 +76,31 @@
   &__description
     font-size: 15px
       display: block
+.second_item
+  margin-top: -5px
+  margin-bottom: 25px
+.third_item
+  margin-bottom: 35px
+.third_item_text
+  margin-top: 10px
+.error
+  display: flex
+  flex-direction: column
+  margin: 0 auto
+  outline: none
+  border: 1px solid red
+  &:focus
+    border: 1px solid red
+#username-error
+  border: 0
+  color: red
+#phone-error
+  border: 0
+  color: red
+#email-error
+  border: 0
+  color: red
+// Адаптив
 @media ( max-width: 1200px)
   .brif
     &__form
@@ -94,7 +124,7 @@
       margin-bottom: 15px
     &__subtitle
       margin-bottom: 30px
-@media ( max-width: 1200px)
+@media ( max-width: 992px)
   .brif
     background-image: url('../img/brif/btif-collor.png'), url('../img/brif/brif-bg.png')
     background-position: top center, center bottom
@@ -102,6 +132,12 @@
     background-repeat: repeat-x, no-repeat
     &-block
       flex-direction: column
+    &__interview
+    &__form
+      margin-top: 100px
+  .form
+    &__description
+      display: block
 @media ( max-width: 768px)
   .brif
     padding-top: 42px
@@ -111,8 +147,8 @@
     &__input
       margin-bottom: 0
     &__button
-      margin-top: 5px
-      font-size: 14px
+      margin-top: 12px
+      font-size: 15px
       margin-bottom: 26px
   .interview
     padding-right: 0
@@ -151,13 +187,15 @@
       width: 140px
       font-size: 14px
       line-height: 23px
-  .second_item_text
-    margin-top: 5px
-    line-height: 18px
+  .phone
+    margin-bottom: 10px
   .first_item
     margin-top: -3px
   .secont_item
     margin-top: -2px
+  .second_item_text
+    margin-top: 5px
+    line-height: 18px
   .third_item
     width: 83%
     margin-top: -9px

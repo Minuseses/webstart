@@ -607,9 +607,17 @@ img {
 }
 
 .brif__input {
+  cursor: pointer;
+  outline: none;
   width: 100%;
   max-width: 370px;
   margin-bottom: 20px;
+}
+
+.brif__input:focus {
+  border-color: orange;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .brif__button {
@@ -619,7 +627,7 @@ img {
   height: 70px;
   width: 100%;
   max-width: 370px;
-  margin-top: 15px;
+  margin-top: 0px;
   margin-bottom: 29px;
 }
 
@@ -657,7 +665,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 32px;
-  font-size: 18px;
+  font-size: 17.7px;
 }
 
 .interview-list__counter {
@@ -696,6 +704,51 @@ img {
   font-size-display: block;
 }
 
+.second_item {
+  margin-top: -5px;
+  margin-bottom: 25px;
+}
+
+.third_item {
+  margin-bottom: 35px;
+}
+
+.third_item_text {
+  margin-top: 10px;
+}
+
+.error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  outline: none;
+  border: 1px solid red;
+}
+
+.error:focus {
+  border: 1px solid red;
+}
+
+#username-error {
+  border: 0;
+  color: red;
+}
+
+#phone-error {
+  border: 0;
+  color: red;
+}
+
+#email-error {
+  border: 0;
+  color: red;
+}
+
 @media (max-width: 1200px) {
   .brif__form {
     padding-left: 30px;
@@ -726,7 +779,7 @@ img {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
   .brif {
     background-image: url("../img/brif/btif-collor.png"), url("../img/brif/brif-bg.png");
     background-position: top center, center bottom;
@@ -738,6 +791,12 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .brif__form {
+    margin-top: 100px;
+  }
+  .form__description {
+    display: block;
   }
 }
 
@@ -753,8 +812,8 @@ img {
     margin-bottom: 0;
   }
   .brif__button {
-    margin-top: 5px;
-    font-size: 14px;
+    margin-top: 12px;
+    font-size: 15px;
     margin-bottom: 26px;
   }
   .interview {
@@ -803,15 +862,18 @@ img {
     font-size: 14px;
     line-height: 23px;
   }
-  .second_item_text {
-    margin-top: 5px;
-    line-height: 18px;
+  .phone {
+    margin-bottom: 10px;
   }
   .first_item {
     margin-top: -3px;
   }
   .secont_item {
     margin-top: -2px;
+  }
+  .second_item_text {
+    margin-top: 5px;
+    line-height: 18px;
   }
   .third_item {
     width: 83%;

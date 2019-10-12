@@ -205,7 +205,7 @@
                 </li>
                 <li class="interview-list__item third_item"> <!--3 Элемент списка-->
                   <span class="interview-list__counter">3</span>
-                  <span class="interview-list__text">Где находится помещение, в котором будет производиться ремонт?</span></li>
+                  <span class="interview-list__text third_item_text">Где находится помещение, в котором будет производиться ремонт?</span></li>
                 <li class="interview-list__item fourth_item"> <!--4 Элемент списка-->
                   <span class="interview-list__counter">4</span>
                   <span class="interview-list__text">Назначение помещения?</span>
@@ -271,23 +271,32 @@
         rules : {
           username:{
             required: true,
-            minlength: 3,
+            minlength: 2,
+            maxlength: 15,
+          },
+          phone:{
+            required: true,
           },
           email:{
-            required: true,
-            email: true,
+            required: true
           }
         },
         messages: {
-          username:{
-            required: "Нам нужно ваше имя",
-            minlength: jQuery.validator.format("Минимальное количство символов: {0}"),
+          username: {
+            required: "Укажите ваше имя",
+            minlength: "Минимальное количество символов {0}",
+            maxlength: "Максимальное количество символов {0}"
           },
-          email: "Нам нужен ваш email"
+          phone:{
+            required: "Укажите телефон",          
+            },
+          email: {
+            required: "Укажите email",
+          }
         }
       });
       // Маска для телефона
-      $('.phone').mask('+7(999)999-99-99');
+      $('.phone').mask('8 (999) 999-99-99');
       // Слайдер
       $('.slider').slick({
         slidesToShow: 3,
