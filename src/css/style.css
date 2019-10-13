@@ -532,7 +532,7 @@ em.invalid {
     width: 58%;
   }
   .offer__input {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
   .offer__button {
     width: 100%;
@@ -855,7 +855,7 @@ em.invalid {
 
 @media (max-width: 768px) {
   .brif {
-    background-size: 740px, contain;
+    background-size: 740px 50%, cover;
     padding-top: 42px;
   }
   .brif__form {
@@ -1449,6 +1449,7 @@ strong {
   max-width: 370px;
   outline: 0;
   cursor: pointer;
+  margin-bottom: 15px;
 }
 
 .modal__input:first-child {
