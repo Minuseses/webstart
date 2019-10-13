@@ -72,15 +72,20 @@
             Мы бесплатно разработаем дизайн-проект Вашего жилья и реализуем его!
           </h2>
           <span class="section-subtitle offer__subtitle">Оставьте заявку на разработку бесплатного дизайн-проекта!</span>
-          <form action="#" class="form offer__form">
-            <input type="text" class="input offer__input" placeholder="Ваше имя">
-            <input type="tel" class="input offer__input" placeholder="Ваш телефон">
-            <button class="button offer__button"><div class="offer__width">Получить бесплатный дизайн-проект</div></button>
-              <div class="offer-call">
-                <div class="offer-call__col">Наш менеджер перезвонит Вам в течение 60 секунд </div>
-                <div class="offer-call__col">или перезвоните нам сами <a href="">+7 (495) 42-251-31</a></div>
+          <form action="#" class="form offer__form" id="offer-form">
+              <div class="offer__input-group">
+                <input type="text" name="username" class="input offer__input" placeholder="Ваше имя">
               </div>
-          </form>
+              <div class="offer__input-group">
+                <input type="tel" name="phone" class="input offer__input phone" placeholder="8 (999) 999-99-99">
+              </div>
+                <button class="button offer__button">Получить бесплатный дизайн-проект</button>
+            </form>
+            <div class="offer-call">
+                <div class="offer-call__col">Наш менеджер перезвонит Вам в течение 60 секунд </div>
+                <div class="offer-call__col">или перезвоните нам сами <br><a href="">+7 (495) 42-251-31</a></div>
+              </div>
+            </div>
         </div>
       </div>
     </section>
@@ -218,9 +223,15 @@
               <h3 class="form__title">Оставьте заявку на бесплатный расчет ремонта по телефону</h3>
               <span class="form__subtitle">Для этого заполните форму ниже</span>
               <form action="#" id="brif-form">
-                <input type="text" autocomplete="off" name="username" class="input brif__input" placeholder="Ваше имя">
-                <input type="tel" autocomplete="off" name="phone" class="input brif__input phone" placeholder="8 (999) 999-99-99">
-                <input type="email" autocomplete="off" name="email" class="input brif__input" placeholder="Ваш email">
+                <div class="input-group">
+                  <input type="text" autocomplete="off" name="username" class="input brif__input" placeholder="Ваше имя">
+                </div>
+                <div class="input-group">
+                  <input type="tel" autocomplete="off" name="phone" class="input brif__input phone" placeholder="8 (999) 999-99-99">
+                </div>
+                <div class="input-group">
+                  <input type="email" autocomplete="off" name="email" class="input brif__input" placeholder="Ваш email">
+                </div>
                 <button class="button brif__button">Рассчитать стоимость</button>
                 <span class="form__description">Мы перезвоним Вам в течение 60 секунд</span>
               </form>
@@ -231,16 +242,49 @@
 
 
   </main>
+
+  <footer class="footer">
+    <div class="map" id="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d287143.0184728845!2d37.293097322309755!3d55.78794455591796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b531bcad7b00d1%3A0xd15ba8e84e3d7936!2zIjEwMNC70LjRh9C90YvQuSDRgNC10LzQvtC90YIiLiDQoNC10LzQvtC90YIg0LrQstCw0YDRgtC40YAg0Lgg0L7RhNC40YHQvtCyINCyINCc0L7RgdC60LLQtQ!5e0!3m2!1sru!2sru!4v1570954280893!5m2!1sru!2sru" 
+      width="100%" height="640" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+    <div class="container">
+      <div class="contacts-block">
+        <div class="contacts">
+          <h3 class="contacts__title">Приезжайте к нам в гости!<br> Проконсультируем Вас<br> по всем вопросам ремонта </h3>
+          <ul class="contacts-list">
+            <li class="contacts-list__item">
+              <span class="contacts-list__icon"><img src="src/img/footer/map-placeholder.png" alt=""></span>
+              <span class="contacts-list__text">г. Москва<br><strong>ул. Ленинга, д. 10,</strong><br><strong>корпус 2, оф. 308</strong></span>
+            </li>
+            <li class="contacts-list__item">
+              <span class="contacts-list__icon"><img src="src/img/footer/clock-with-white-face.png" alt=""></span>
+              <span class="contacts-list__text">Режим работы:<br><strong>с 9:00 до 18:00</strong></span>
+            </li>
+            <li class="contacts-list__item">
+              <span class="contacts-list__icon"><img src="src/img/footer/phone-call-button.png" alt=""></span>
+              <span class="contacts-list__text">Телефон:<br><a href="tel:+7(495)42-251-31" class="contacts-phone">+ 7 (495) 42-251-31</a></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <div class="modal" id="modal">
     <div class="modal-dialog">
       <button class="modal-dialog__close" id="close">&times;</button>
       <h2 class="modal-dialog__title">Узнайте точную стоимость ремонта по телефону!</h4>
       <span class="modal-dialog__subtitle">Заполните поля ниже - мы свяжемся с Вами</span>
-        <form action="#" class="form modal__form">
-          <input type="text" class="input modal__input" placeholder="Ваше имя">
-          <input type="tel" class="input modal__input" placeholder="Ваш телефон">
-        </form>
+        <form action="#" class="form modal__form" id="modal-form">
+          <div class="modal-input-group">
+            <input type="text" autocomplete="off" name="username" class="input modal__input" placeholder="Ваше имя">
+          </div>
+          <div class="modal-input-group">
+            <input type="tel" autocomplete="off" name="phone" class="input modal__input" placeholder="8 (999) 999-99-99">
+          </div>
           <button class="modal-dialog__button">Узнать стоимость</button>
+        </form>
           <span class="modal-dialog__or">Или Вы можете перезвонить нам сами по телефону:</span>
           <a href="tel:+7 (495) 42-251-31" class="modal-dialog__phone"><strong>+7 (495) 42-251-31</strong></a>
     </div>
@@ -267,6 +311,54 @@
     // Слайдер
     $(document).ready(function() {
       // Валидация форм
+      $('#modal-form').validate({
+        rules : {
+          username:{
+            required: true,
+            minlength: 2,
+            maxlength: 15,
+          },
+          phone:{
+            required: true,
+          },
+        },
+        messages: {
+          username: {
+            required: "Укажите ваше имя",
+            minlength: "Минимальное количество символов: {0}",
+            maxlength: "Максимальное количество символов: {0}"
+          },
+          phone:{
+            required: "Укажите телефон",          
+            },
+          },
+          errorElement: "em",
+          errorClass: "modal-error",
+        });
+      $('#offer-form').validate({
+        rules : {
+          username:{
+            required: true,
+            minlength: 2,
+            maxlength: 15,
+          },
+          phone:{
+            required: true,
+          },
+        },
+        messages: {
+          username: {
+            required: "Укажите ваше имя",
+            minlength: "Минимальное количество символов: {0}",
+            maxlength: "Максимальное количество символов: {0}"
+          },
+          phone:{
+            required: "Укажите телефон",          
+            },
+          },
+          errorElement: "em",
+          errorClass: "errored",
+        });
       $('#brif-form').validate({
         rules : {
           username:{
@@ -294,7 +386,9 @@
             required: "Заполните поле",
             email: "Введите корректный email",
           }
-        }
+        },
+        errorElement: "em",
+        errorClass: "invalid",
       });
       // Маска для телефона
       $('.phone').mask('8 (999) 999-99-99');

@@ -36,7 +36,43 @@ img
   padding: 20px 28px
   font-size: 15px
   border-radius: 10px
+  &:focus
+    border-color: orange
+    transition: 1s
+  &-group
+    position: relative
 
+
+em.modal-error
+  color: red
+  position: absolute
+  top: -17px
+  left: 5px
+  border: 0
+.modal-error
+  border: 1px solid red
+  &:focus
+    border-color: red
+em.errored
+  color: red
+  position: absolute
+  top: 58px
+  left: 5px
+  border: 0
+.errored
+  border: 1px solid red
+  &:focus
+    border-color: red
+em.invalid
+  color: red
+  position: absolute
+  top: -18px
+  left: 5px
+  border: 0
+.invalid
+  border: 1px solid red
+  &:focus
+    border-color: red
 
 
 
@@ -54,8 +90,7 @@ img
   .section
     padding: 40px 0
   .container
-    max-width: 320px
-
+    max-width: 310px
 @media ( max-width: 320px )
   .container
     max-width: 275px

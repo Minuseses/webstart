@@ -42,6 +42,9 @@
       border: 0
       border-radius: 6px
       margin-bottom: 25px
+      margin-top: 20px
+      &:hover
+        background-color: lighten($main-color, 10%)
     &__or
       font-size: 15px
       font-weight: 400
@@ -55,10 +58,11 @@
 
   &__input
     width: 100%
+    max-width: 370px
     outline: 0
     cursor: pointer
     &:first-child
-      margin-bottom: 10px
+      margin-bottom: 15px
     &:last-child
       margin-bottom: 20px
 #close
@@ -69,4 +73,7 @@
   background-color: #fff
   border: $main-color solid 3px
   border-radius: 50%
-
+  &:hover
+    border-color: lighten($main-color, 10%)
+.modal-input-group
+  position: relative

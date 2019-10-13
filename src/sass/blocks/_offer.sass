@@ -13,7 +13,6 @@
     background-color: #fff
   &-block
     width: 50%
-    padding-right: 90px
     position: relative
   &__title
     margin-top: -15px
@@ -30,20 +29,20 @@
     margin-bottom: 30px
     width: 240px
     padding: 21px 28px
+    &-group
+      display: inline-block
+      position: relative
     &:first-child
       margin-right: 10px
-    &:focus
-      border-color: orange
-      transition: 1.3s
   &__button
     +bold
-    width: 100%
+    width: 85%
     min-height: 70px
     font-size: 16px
-    margin-bottom: 28px
+    margin-bottom: 25px
   &-call
     font-size: 15px
-    width: 100%
+    width: 85%
     display: flex
     line-height: 24px
     margin-right: 0
@@ -53,7 +52,8 @@
         text-decoration: none
         +bold
       &:first-child
-        margin-right: 70px
+        width: 228px
+        margin-right: 66px
 .go-top
   position: fixed
   cursor: pointer
@@ -71,15 +71,19 @@
 
 
 
+
 @media ( max-width: 1200px)
   .offer
     background-size: cover
+    &::before
+      width: 58%
     &__input
-      margin-bottom: 10px
+      margin-bottom: 25px
     &__button
       width: 100%
       font-size: 13px
     &-call
+      width: 100%
       &__col
         width: 250px
         &:first-child
@@ -88,12 +92,34 @@
       width: 58%
     .input
       width: 100% 
+@media ( max-width: 992px)
+  .offer
+    &__input
+      &-group
+        width: 100%
+    &-call
+      &__col
+        font-size: 14px
+        &:first-child
+          margin-right: 24px
+          width: 253px
 @media ( max-width: 768px)
   .offer
     background: #fff
+    &__title
+      font-size: 20px
+      max-width: 95%
+      margin-top: 0 
+      line-height: 22px
     &-block
       width: 100%
       padding-right: 0
+    &-call
+      display: flex
+      flex-direction: column
+      &__col
+        &:first-child
+          margin-bottom: 10px
   .input
     width: 100%
     padding-top: 24px

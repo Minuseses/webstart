@@ -1,0 +1,77 @@
+strong
+  +bold
+.footer
+  position: relative
+.map
+  position: absolute
+  width: 50%
+  left: 0
+  top: 0
+.contacts
+  flex-basis: 50%
+  padding-top: 70px
+  padding-left: 213px
+  &__title
+    +bold
+    font-size: 30px
+    font-size: 22px
+    line-height: 33px
+    margin-bottom: 94px
+  &-block
+    display: flex
+    justify-content: flex-end
+  &-phone
+    color: black
+    text-decoration: none
+    +bold
+  &-list
+    padding: 0
+    list-style: none
+    &__icon
+      width: 20px
+      height: 20px
+      text-align: center
+      line-height: 20px
+      margin-right: 22px
+      margin-left: -4px
+    &__text
+      line-height: 22px
+    &__item
+      display: flex
+      align-items: flex-start
+      margin-bottom: 39px
+
+
+
+
+
+// Адаптив
+@media ( max-width: 1200px)
+  .contacts
+    padding-left: 80px
+    &__title
+      font-size: 19px
+      margin-bottom: 70px
+    &-list
+      &__text
+        font-size: 14px
+@media ( max-width: 992px )
+  .map
+    position: relative
+    width: 100%
+  .contacts
+    padding-top: 60px
+    padding-left: 0
+    margin: 0 auto
+    &__title
+      line-height: 20px
+      margin-top: 0
+      margin-bottom: 50px
+    &-list
+      &__item
+        margin-bottom: 15px
+@media ( max-width: 768px)
+  .contacts
+    &__title
+      width: 200px
+      font-size: 12px
