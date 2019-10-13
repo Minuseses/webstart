@@ -99,7 +99,7 @@ em.modal-error {
 em.errored {
   color: red;
   position: absolute;
-  top: 58px;
+  top: 59px;
   left: 5px;
   border: 0;
 }
@@ -110,6 +110,13 @@ em.errored {
 
 .errored:focus {
   border-color: red;
+}
+
+@media (max-width: 768px) {
+  em.errored {
+    top: 45px;
+    font-size: 14px;
+  }
 }
 
 em.invalid {
@@ -126,6 +133,20 @@ em.invalid {
 
 .invalid:focus {
   border-color: red;
+}
+
+@media (max-width: 992px) {
+  em.invalid {
+    left: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  em.invalid {
+    font-size: 13px;
+    left: 10px;
+    top: 45px;
+  }
 }
 
 @media (max-width: 1200px) {

@@ -42,7 +42,7 @@ img
   &-group
     position: relative
 
-
+//Ошибки для мождального окна
 em.modal-error
   color: red
   position: absolute
@@ -53,16 +53,22 @@ em.modal-error
   border: 1px solid red
   &:focus
     border-color: red
+//Ошибки для блока с предложением
 em.errored
   color: red
   position: absolute
-  top: 58px
+  top: 59px
   left: 5px
   border: 0
 .errored
   border: 1px solid red
   &:focus
     border-color: red
+@media ( max-width: 768px)
+  em.errored
+    top: 45px
+    font-size: 14px
+//Ошибки для блока с опросом
 em.invalid
   color: red
   position: absolute
@@ -73,8 +79,14 @@ em.invalid
   border: 1px solid red
   &:focus
     border-color: red
-
-
+@media ( max-width: 992px)
+  em.invalid
+    left: 140px
+@media ( max-width: 768px)
+  em.invalid
+    font-size: 13px
+    left: 10px
+    top: 45px
 
 
 
